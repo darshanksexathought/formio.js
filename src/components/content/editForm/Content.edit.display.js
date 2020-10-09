@@ -35,12 +35,12 @@ export default [
     key: 'tableView',
     ignore: true
   },
-  {
-    weight: 700,
-    type: 'checkbox',
-    label: 'Refresh On Change',
-    tooltip: 'Rerender the field whenever a value on the form changes.',
-    key: 'refreshOnChange',
-    input: true
-  },
+  // {
+  //   weight: 700,
+  //   type: 'checkbox',
+  //   label: 'Refresh On Change',
+  //   tooltip: 'Rerender the field whenever a value on the form changes.',
+  //   key: 'refreshOnChange',
+  //   input: true
+  // },
 ];

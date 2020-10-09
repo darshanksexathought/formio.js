@@ -8,7 +8,7 @@ import ContentComponent from './content/Content';
 import CurrencyComponent from './currency/Currency';
 import DataGridComponent from './datagrid/DataGrid';
 import DataMapComponent from './datamap/DataMap';
-import DateTimeComponent from './datetime/DateTime';
+// import DateTimeComponent from './datetime/DateTime';
 import DayComponent from './day/Day';
 import EditGridComponent from './editgrid/EditGrid';
 import EmailComponent from './email/Email';
@@ -39,7 +39,7 @@ import TabsComponent from './tabs/Tabs';
 import TagsComponent from './tags/Tags';
 import TextAreaComponent from './textarea/TextArea';
 import TextFieldComponent from './textfield/TextField';
-import TimeComponent from './time/Time';
+// import TimeComponent from './time/Time';
 import TreeComponent from './tree/Tree';
 import UnknownComponent from './unknown/Unknown';
 import UrlComponent from './url/Url';
@@ -57,7 +57,7 @@ export default {
   currency: CurrencyComponent,
   datagrid: DataGridComponent,
   datamap: DataMapComponent,
-  datetime: DateTimeComponent,
+  // datetime: DateTimeComponent,
   day: DayComponent,
   editgrid: EditGridComponent,
   email: EmailComponent,
@@ -81,14 +81,14 @@ export default {
   resource: ResourceComponent,
   select: SelectComponent,
   selectboxes: SelectBoxesComponent,
-  signature: SignatureComponent,
+  // signature: SignatureComponent,
   survey: SurveyComponent,
   table: TableComponent,
   tabs: TabsComponent,
   tags: TagsComponent,
   textarea: TextAreaComponent,
   textfield: TextFieldComponent,
-  time: TimeComponent,
+  // time: TimeComponent,
   tree: TreeComponent,
   unknown: UnknownComponent,
   url: UrlComponent,

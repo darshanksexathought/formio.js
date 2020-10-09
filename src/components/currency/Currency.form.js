@@ -34,6 +34,10 @@ export default function(...extend) {
           key: 'validate.pattern',
           ignore: true,
         },
+        {
+          key: 'unique',
+          ignore: true
+        }
       ]
     },
   ], ...extend);

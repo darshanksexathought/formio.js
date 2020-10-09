@@ -124,15 +124,15 @@ export default [
     placeholder: 'Custom CSS Class',
     tooltip: 'Custom CSS class to add to this component.'
   },
-  {
-    weight: 600,
-    type: 'textfield',
-    input: true,
-    key: 'tabindex',
-    label: 'Tab Index',
-    placeholder: '0',
-    tooltip: 'Sets the tabindex attribute of this component to override the tab order of the form. See the <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\'>MDN documentation</a> on tabindex for more information.'
-  },
+  // {
+  //   weight: 600,
+  //   type: 'textfield',
+  //   input: true,
+  //   key: 'tabindex',
+  //   label: 'Tab Index',
+  //   placeholder: '0',
+  //   tooltip: 'Sets the tabindex attribute of this component to override the tab order of the form. See the <a href=\'https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\'>MDN documentation</a> on tabindex for more information.'
+  // },
   {
     weight: 1100,
     type: 'checkbox',
@@ -149,14 +149,14 @@ export default [
     key: 'hideLabel',
     input: true
   },
-  {
-    weight: 1350,
-    type: 'checkbox',
-    label: 'Initial Focus',
-    tooltip: 'Make this field the initially focused element on this form.',
-    key: 'autofocus',
-    input: true
-  },
+  // {
+  //   weight: 1350,
+  //   type: 'checkbox',
+  //   label: 'Initial Focus',
+  //   tooltip: 'Make this field the initially focused element on this form.',
+  //   key: 'autofocus',
+  //   input: true
+  // },
   {
     weight: 1370,
     type: 'checkbox',

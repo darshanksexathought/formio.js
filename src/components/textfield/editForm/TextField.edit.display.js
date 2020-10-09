@@ -80,14 +80,14 @@ export default [
     key: 'allowMultipleMasks',
     label: 'Allow Multiple Masks'
   },
-  {
-    weight: 1350,
-    type: 'checkbox',
-    input: true,
-    key: 'spellcheck',
-    defaultValue: true,
-    label: 'Allow Spellcheck'
-  },
+  // {
+  //   weight: 1350,
+  //   type: 'checkbox',
+  //   input: true,
+  //   key: 'spellcheck',
+  //   defaultValue: true,
+  //   label: 'Allow Spellcheck'
+  // },
   {
     weight: 417,
     type: 'datagrid',
