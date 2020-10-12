@@ -25,7 +25,7 @@ import NestedDataComponent from './_classes/nesteddata/NestedDataComponent';
 import NestedArrayComponent from './_classes/nestedarray/NestedArrayComponent';
 import NumberComponent from './number/Number';
 // import PanelComponent from './panel/Panel';
-// import PasswordComponent from './password/Password';
+import PasswordComponent from './password/Password';
 import PhoneNumberComponent from './phonenumber/PhoneNumber';
 import RadioComponent from './radio/Radio';
 import ReCaptchaComponent from './recaptcha/ReCaptcha';
@@ -33,9 +33,9 @@ import ResourceComponent from './resource/Resource';
 import SelectBoxesComponent from './selectboxes/SelectBoxes';
 import SelectComponent from './select/Select';
 import SignatureComponent from './signature/Signature';
-import SurveyComponent from './survey/Survey';
+// import SurveyComponent from './survey/Survey';
 import TableComponent from './table/Table';
-import TabsComponent from './tabs/Tabs';
+// import TabsComponent from './tabs/Tabs';
 import TagsComponent from './tags/Tags';
 import TextAreaComponent from './textarea/TextArea';
 import TextFieldComponent from './textfield/TextField';
@@ -74,7 +74,7 @@ export default {
   nestedarray: NestedArrayComponent,
   number: NumberComponent,
   // panel: PanelComponent,
-  // password: PasswordComponent,
+  password: PasswordComponent,
   phoneNumber: PhoneNumberComponent,
   radio: RadioComponent,
   recaptcha: ReCaptchaComponent,
@@ -82,9 +82,9 @@ export default {
   select: SelectComponent,
   selectboxes: SelectBoxesComponent,
   // signature: SignatureComponent,
-  survey: SurveyComponent,
+  // survey: SurveyComponent,
   table: TableComponent,
-  tabs: TabsComponent,
+  // tabs: TabsComponent,
   tags: TagsComponent,
   textarea: TextAreaComponent,
   textfield: TextFieldComponent,
