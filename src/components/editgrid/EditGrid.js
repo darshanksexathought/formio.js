@@ -42,7 +42,7 @@ export default class EditGridComponent extends NestedArrayComponent {
     return {
       title: 'Edit Grid',
       icon: 'tasks',
-      group: 'data',
+      group: 'layout',
       documentation: 'http://help.form.io/userguide/#editgrid',
       weight: 30,
       schema: EditGridComponent.schema(),
