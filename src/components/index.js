@@ -35,7 +35,7 @@ import SelectComponent from './select/Select';
 import SignatureComponent from './signature/Signature';
 // import SurveyComponent from './survey/Survey';
 import TableComponent from './table/Table';
-// import TabsComponent from './tabs/Tabs';
+import TabsComponent from './tabs/Tabs';
 import TagsComponent from './tags/Tags';
 import TextAreaComponent from './textarea/TextArea';
 import TextFieldComponent from './textfield/TextField';
@@ -84,7 +84,7 @@ export default {
   // signature: SignatureComponent,
   // survey: SurveyComponent,
   table: TableComponent,
-  // tabs: TabsComponent,
+  tabs: TabsComponent,
   tags: TagsComponent,
   textarea: TextAreaComponent,
   textfield: TextFieldComponent,
