@@ -56,6 +56,7 @@ import wizard from './wizard';
 import wizardHeader from './wizardHeader';
 import wizardNav from './wizardNav';
 import cssClasses from './cssClasses';
+import builderSidebarTab from './builderSidebarTab';
 
 export default {
   transform(type, text) {
@@ -126,5 +127,6 @@ export default {
   well,
   wizard,
   wizardHeader,
-  wizardNav
+  wizardNav,
+  builderSidebarTab
 };

@@ -524,12 +524,18 @@ export default class WebformBuilder extends Component {
   }
 
   render() {
+    this.basicGroups = [this.groupOrder[4]];
+    this.customGroups = [this.groupOrder[0], this.groupOrder[1], this.groupOrder[2], this.groupOrder[3]];
+    this.otherGroups = [this.groupOrder[5], this.groupOrder[6]];
     return this.renderTemplate('builder', {
       sidebar: this.renderTemplate('builderSidebar', {
         scrollEnabled: this.sideBarScroll,
         groupOrder: this.groupOrder,
         groupId: `builder-sidebar-${this.id}`,
-        groups: this.groupOrder.map((groupKey) => this.renderTemplate('builderSidebarGroup', {
+        groupTabs: this.renderTemplate('builderSidebarTab', {
+          tab:1
+        }),
+        groups: this.basicGroups.map((groupKey) => this.renderTemplate('builderSidebarGroup', {
           group: this.groups[groupKey],
           groupKey,
           groupId: `builder-sidebar-${this.id}`,
@@ -559,6 +565,10 @@ export default class WebformBuilder extends Component {
         'sidebar-anchor': 'multiple',
         'sidebar-group': 'multiple',
         'sidebar-container': 'multiple',
+        'basicTab': 'single',
+        'customTab': 'single',
+        'othersTab': 'single',
+        'builder-sidebar-tabs': 'single'
       });
 
       if (this.sideBarScroll && Templates.current.handleBuilderSidebarScroll) {
@@ -604,7 +614,16 @@ export default class WebformBuilder extends Component {
 
       this.addEventListener(this.refs['sidebar-search'], 'input', (e) => {
         const searchString = e.target.value;
-        this.searchFields(searchString);
+        this.searchFields(searchString, 'basicGroups');
+      });
+      this.addEventListener(this.refs['basicTab'], 'click',()=> {
+        this.searchFields(null, 'basicGroups', 1);
+      });
+      this.addEventListener(this.refs['customTab'], 'click',()=> {
+        this.searchFields(null, 'customGroups', 2);
+      });
+      this.addEventListener(this.refs['othersTab'], 'click',()=> {
+        this.searchFields(null, 'otherGroups', 3);
       });
 
       if (this.dragDropEnabled) {
@@ -617,11 +636,11 @@ export default class WebformBuilder extends Component {
     });
   }
 
-  searchFields(searchString) {
+  searchFields(searchString, groupName,tab=1) {
     if (!this.refs['sidebar-groups']) {
       return;
     }
-    if (searchString) {
+    if (searchString && searchString.length > 0) {
       const filteredComponentsOrder = [];
       for (const type in this.fieldsList.components) {
         const builderInfo = this.fieldsList.components[type];
@@ -638,7 +657,7 @@ export default class WebformBuilder extends Component {
       });
     }
     else {
-      this.refs['sidebar-groups'].innerHTML = this.groupOrder.map((groupKey) => this.renderTemplate('builderSidebarGroup', {
+      this.refs['sidebar-groups'].innerHTML = this[groupName].map((groupKey) => this.renderTemplate('builderSidebarGroup', {
         group: this.groups[groupKey],
         groupKey,
         groupId: `builder-sidebar-${this.id}`,
@@ -649,6 +668,9 @@ export default class WebformBuilder extends Component {
           subgroups: []
         })),
       })).join('');
+      this.refs['builder-sidebar-tabs'].innerHTML = this.renderTemplate('builderSidebarTab', {
+        tab:tab
+      });
     }
 
     this.loadRefs(this.element, {
@@ -656,9 +678,41 @@ export default class WebformBuilder extends Component {
       'sidebar-anchor': 'multiple',
       'sidebar-group': 'multiple',
       'sidebar-container': 'multiple',
+      'basicTab': 'single',
+      'customTab': 'single',
+      'othersTab': 'single',
+      'builder-sidebar-tabs': 'single'
     });
-
+    this.addEventListener(this.refs['basicTab'], 'click',()=> {
+      this.searchFields(null, 'basicGroups', 1);
+    });
+    this.addEventListener(this.refs['customTab'], 'click',()=> {
+      this.searchFields(null, 'customGroups', 2);
+    });
+    this.addEventListener(this.refs['othersTab'], 'click',()=> {
+      this.searchFields(null, 'otherGroups', 3);
+    });
     this.updateDragAndDrop();
+    this.refs['sidebar-anchor'].forEach((anchor, index) => {
+      this.addEventListener(anchor, 'click', () => {
+        const clickedParentId = anchor.getAttribute('data-parent').slice('#builder-sidebar-'.length);
+        const clickedId = anchor.getAttribute('data-target').slice('#group-'.length);
+
+        this.refs['sidebar-group'].forEach((group, groupIndex) => {
+          const openByDefault = group.getAttribute('data-default') === 'true';
+          const groupId = group.getAttribute('id').slice('group-'.length);
+          const groupParent = group.getAttribute('data-parent').slice('#builder-sidebar-'.length);
+
+          group.style.display =
+            (
+              (openByDefault && groupParent === clickedId) ||
+              groupId === clickedParentId ||
+              groupIndex === index
+            )
+              ? 'inherit' : 'none';
+        });
+      }, true);
+    });
   }
 
   updateDragAndDrop() {
