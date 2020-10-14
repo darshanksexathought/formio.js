@@ -39,18 +39,18 @@ export default function(...extend) {
           weight: 30,
           components: ComponentEditAPI
         },
-        {
-          label: 'Conditional',
-          key: 'conditional',
-          weight: 40,
-          components: ComponentEditConditional
-        },
-        {
-          label: 'Logic',
-          key: 'logic',
-          weight: 50,
-          components: ComponentEditLogic
-        },
+        // {
+        //   label: 'Conditional',
+        //   key: 'conditional',
+        //   weight: 40,
+        //   components: ComponentEditConditional
+        // },
+        // {
+        //   label: 'Logic',
+        //   key: 'logic',
+        //   weight: 50,
+        //   components: ComponentEditLogic
+        // },
         // {
         //   label: 'Layout',
         //   key: 'layout',
