@@ -380,9 +380,10 @@ td > .form-group {
   bottom: 0;
   left: 0;
   /* fix for Scrollbars not clickable on overflow #552 */
-  background: rgba(0, 0, 0, 0.4);
+  // background: rgba(0, 0, 0, 0.4);
   animation: formio-dialog-fadein 0.5s;
   /* end fix for Scrollbars not clickable on overflow #552 */
+  width: 425px;
 }
 
 .formio-dialog.formio-dialog-disabled-animation,
@@ -405,6 +406,7 @@ td > .form-group {
   margin-right: 15px;
   background: transparent;
   /* end fix for Scrollbars not clickable on overflow #552 */
+  width: 450px;
 }
 
 .formio-dialog-no-overlay {
@@ -528,8 +530,11 @@ body.formio-dialog-open {
   margin: 0 auto;
   max-width: 100%;
   padding: 1em;
-  position: relative;
-  width: 80%;
+  position: absolute;
+  width: 380px;
+  left: 50px;
+  top: 65px;
+  height: calc(100% - 120px);
 }
 
 .formio-dialog.formio-dialog-theme-default .formio-dialog-close {

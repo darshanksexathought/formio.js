@@ -53,7 +53,7 @@
 }
 
 .form-builder-group-header {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .component-btn-group .component-settings-button {
@@ -189,6 +189,7 @@
 .component-edit-container {
   height: auto;
   overflow: hidden;
+  padding-left: 15px;
 }
 
 .component-edit-content {
