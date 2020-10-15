@@ -1,11 +1,24 @@
-<ul class="nav nav-tabs" id="myTab" ref="builder-sidebar-tabs" role="tablist">
+<div class="container mb-2" id="myTab" ref="builder-sidebar-tabs" role="tablist">
+  <div class="row">
+    <div class="col-sm border-bottom{{ctx.tab == 1 ? ' border-info text-center' : ''}}" style="border-width: 2px !important; cursor: pointer;" ref="basicTab">
+      Basic
+    </div>
+    <div class="col-sm border-bottom{{ctx.tab == 2 ? ' border-info text-center' : ''}}" style="border-width: 2px !important; cursor: pointer;" ref="customTab">
+     Custom
+    </div>
+    <div class="col-sm border-bottom{{ctx.tab == 3 ? ' border-info text-center' : ''}}" style="border-width: 2px !important; cursor: pointer;" ref="othersTab">
+      Others
+    </div>
+  </div>
+<!-- 
+
   <li class="nav-item" role="presentation" ref="basicTab">
-    <a class="nav-link {{ctx.tab == 1 ? 'active' : ''}}"  id="home-tab" data-toggle="tab"  role="tab" aria-controls="basic" >Basic</a >
+    <a class="nav-link {{ctx.tab == 1 ? 'border-bottom' : ''}}"  id="home-tab" data-toggle="tab"  role="tab" aria-controls="basic" >Basic</a >
   </li>
   <li class="nav-item" ref="customTab" role="presentation">
     <a  class="nav-link {{ctx.tab == 2 ? 'active' : ''}}" id="profile-tab" data-toggle="tab" role="tab" aria-controls="custom">Custom</a>
     </li>
   <li class="nav-item" ref="othersTab" role="presentation">
     <a  class="nav-link {{ctx.tab == 3 ? 'active' : ''}}" id="contact-tab" data-toggle="tab" role="tab" aria-controls="others" >Others</a>
-    </li>
-</ul>
+    </li> -->
+  </div>
