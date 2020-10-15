@@ -406,7 +406,6 @@ td > .form-group {
   margin-right: 15px;
   background: transparent;
   /* end fix for Scrollbars not clickable on overflow #552 */
-  width: 450px;
 }
 
 .formio-dialog-no-overlay {
@@ -522,7 +521,7 @@ body.formio-dialog-open {
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
   -webkit-animation: formio-dialog-flyin .5s;
   animation: formio-dialog-flyin .5s;
-  background: #f0f0f0;
+  background: #e0f2f1;
   border-radius: 5px;
   font-family: 'Helvetica',sans-serif;
   font-size: 1.1em;
@@ -728,6 +727,7 @@ body.formio-dialog-open {
 .formio-component-hidden:not(.formio-component-checkbox),
 .formio-component-datasource {
   margin-bottom: 0;
+  visibility: hidden;
 }
 
 .checkbox-inline label,
