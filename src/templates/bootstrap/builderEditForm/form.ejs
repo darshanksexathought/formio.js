@@ -6,9 +6,9 @@
   <!-- <div class="col col-sm-6"> -->
   <div>
     <div class="float-right" style="margin-right: 20px; padding-left: 75px;">
-      <a href="{{ctx.t(ctx.componentInfo.documentation)}}" target="_blank">
+      <!-- <a href="{{ctx.t(ctx.componentInfo.documentation)}}" target="_blank">
         <i class="{{ctx.iconClass('new-window')}}"></i> {{ctx.t('Help')}}
-      </a>
+      </a> -->
     </div>
   </div>
 </div>
@@ -39,12 +39,12 @@
         </div>
       </div>
     </div> -->
-    {% if (ctx.componentInfo.help) { %}
+    <!-- {% if (ctx.componentInfo.help) { %}
     <div class="card card-body bg-light formio-settings-help">
       {{ ctx.t(ctx.componentInfo.help) }}
     </div>
-    {% } %}
-    <div style="position: fixed; top: calc(100% - 120px); background-color: white; width: 350px; z-index: 5; display: flex;justify-content: flex-end;padding: 8pt;">
+    {% } %} -->
+    <div style="position: fixed; top: calc(100% - 120px); background-color: white; z-index: 5; display: flex;justify-content: flex-end;padding: 8pt; left: 50px;" class="col-xs-5 col-sm-4 col-md-3">
       <button class="btn btn-danger" ref="removeButton" style="margin-right: 10px;">{{ctx.t('Remove')}}</button>
       <button class="btn btn-secondary" style="margin-right: 10px; color: #FF9B08; border-color: #FF9B08; background-color: white;" ref="cancelButton">{{ctx.t('Cancel')}}</button>
       <button class="btn btn-success" style="background-color: #FF9B08; color: white; border-color: #FF9B08;" ref="saveButton">{{ctx.t('Save')}}</button>
