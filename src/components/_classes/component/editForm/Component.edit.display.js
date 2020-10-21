@@ -141,14 +141,14 @@ export default [
   //   key: 'hidden',
   //   input: true
   // },
-  {
-    weight: 1200,
-    type: 'checkbox',
-    label: 'Hide Label',
-    tooltip: 'Hide the label (title, if no label) of this component. This allows you to show the label in the form builder, but not when it is rendered.',
-    key: 'hideLabel',
-    input: true
-  },
+  // {
+  //   weight: 1200,
+  //   type: 'checkbox',
+  //   label: 'Hide Label',
+  //   tooltip: 'Hide the label (title, if no label) of this component. This allows you to show the label in the form builder, but not when it is rendered.',
+  //   key: 'hideLabel',
+  //   input: true
+  // },
   // {
   //   weight: 1350,
   //   type: 'checkbox',
@@ -168,14 +168,14 @@ export default [
       return context.instance.options.editComponent.inDataGrid;
     }
   },
-  {
-    weight: 1400,
-    type: 'checkbox',
-    label: 'Disabled',
-    tooltip: 'Disable the form input.',
-    key: 'disabled',
-    input: true
-  },
+  // {
+  //   weight: 1400,
+  //   type: 'checkbox',
+  //   label: 'Disabled',
+  //   tooltip: 'Disable the form input.',
+  //   key: 'disabled',
+  //   input: true
+  // },
   // {
   //   weight: 1500,
   //   type: 'checkbox',
@@ -184,13 +184,13 @@ export default [
   //   key: 'tableView',
   //   input: true
   // },
-  {
-    weight: 1600,
-    type: 'checkbox',
-    label: 'Modal Edit',
-    tooltip: 'Opens up a modal to edit the value of this component.',
-    key: 'modalEdit',
-    input: true
-  },
+  // {
+  //   weight: 1600,
+  //   type: 'checkbox',
+  //   label: 'Modal Edit',
+  //   tooltip: 'Opens up a modal to edit the value of this component.',
+  //   key: 'modalEdit',
+  //   input: true
+  // },
 ];
 /* eslint-enable max-len */
