@@ -511,6 +511,8 @@ body.formio-dialog-open {
 .formio-dialog.formio-dialog-theme-default {
   padding-bottom: 160px;
   padding-top: 160px;
+  left: 50px;
+  position: absolute;
 }
 
 .formio-dialog.formio-dialog-theme-default.formio-dialog-closing .formio-dialog-content {
@@ -530,8 +532,6 @@ body.formio-dialog-open {
   max-width: 100%;
   padding: 1em;
   position: absolute;
-  width: 380px;
-  left: 50px;
   top: 65px;
   height: calc(100% - 120px);
 }
@@ -541,7 +541,7 @@ body.formio-dialog-open {
   background: transparent;
   cursor: pointer;
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
   z-index: 100;
 }
