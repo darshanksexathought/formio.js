@@ -1,5 +1,5 @@
 {
-  "name": "@smartfoodsafe/formio",
+  "name": "@smartfoodsafe/formiojs",
   "version": "4.12.2",
   "description": "JavaScript powered Forms with JSON Form Builder",
   "main": "index.js",
