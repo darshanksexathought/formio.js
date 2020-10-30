@@ -4,6 +4,14 @@ export default [
     ignore: true
   },
   {
+    // Or add your own. The syntax is form.io component definitions.
+    type: 'CONDITIONAL_FORMATTING_EDIT',
+    input: true,
+    key: 'conditinalFormattingEdit',
+    //refreshOn: 'componentSelect'
+    // This will be available as component.myCustomSetting
+  },
+  {
     key: 'validate.minLength',
     ignore: true
   },

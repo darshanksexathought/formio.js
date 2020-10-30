@@ -40,11 +40,15 @@ export default [
     addAnother: 'Add Column',
     tooltip: 'The width, offset, push, and pull settings for each column.',
     reorder: true,
+    multiple: true,
+    validate:{ multiple: true },
     components: [
       {
         type: 'hidden',
         key: 'components',
-        defaultValue: []
+        multiple: true,
+        validate:{ multiple: true },
+        defaultValue: ''
       },
       {
         type: 'select',
