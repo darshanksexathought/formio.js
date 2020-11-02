@@ -176,14 +176,14 @@ export default [
   //   key: 'disabled',
   //   input: true
   // },
-  // {
-  //   weight: 1500,
-  //   type: 'checkbox',
-  //   label: 'Table View',
-  //   tooltip: 'Shows this value within the table view of the submissions.',
-  //   key: 'tableView',
-  //   input: true
-  // },
+  {
+    weight: 1500,
+    type: 'checkbox',
+    label: 'Table View',
+    tooltip: 'Shows this value within the table view of the submissions.',
+    key: 'tableView',
+    input: true
+  },
   // {
   //   weight: 1600,
   //   type: 'checkbox',

@@ -1211,6 +1211,50 @@ export default class WebformBuilder extends Component {
     return NativePromise.resolve();
   }
 
+  get defaultDialogTemplate() {
+    return `
+    <h3 ref="dialogHeader">${this.t('Do you want to discard ?')}</h3>
+    <div style="display:flex; justify-content: flex-end;">
+      <button ref="dialogCancelButton" class="btn btn-secondary">${this.t('Cancel')}</button>
+      <button ref="dialogYesButton" class="btn btn-primary">${this.t('Yes, discard it')}</button>
+    </div>
+  `;
+  }
+
+  showDialog() {
+    const wrapper = this.ce('div', { ref: 'confirmationDialog' });
+    const dialogContent = this.defaultDialogTemplate;
+
+    wrapper.innerHTML = dialogContent;
+    wrapper.refs = {};
+    this.loadRefs.call(wrapper, wrapper, {
+      dialogHeader: 'single',
+      dialogCancelButton: 'single',
+      dialogYesButton: 'single',
+    });
+
+    const dialog = this.createModal(wrapper);
+    const close = (event) => {
+      event.preventDefault();
+      dialog.close();
+    };
+    let dialogResult;
+
+    const promise = new NativePromise((resolve, reject) => {
+      dialogResult = { resolve, reject };
+    });
+
+    this.addEventListener(wrapper.refs.dialogYesButton, 'click', (event) => {
+      close(event);
+      dialogResult.resolve();
+    });
+    this.addEventListener(wrapper.refs.dialogCancelButton, 'click', (event) => {
+      close(event);
+      dialogResult.reject();
+    });
+    return promise;
+  }
+
   editComponent(component, parent, isNew, isJsonEdit, original) {
     if (!component.key) {
       return;
@@ -1290,7 +1334,7 @@ export default class WebformBuilder extends Component {
       preview: this.preview ? this.preview.render() : false,
     }));
 
-    this.dialog = this.createModal(this.componentEdit, _.get(this.options, 'dialogAttr', {}));
+    this.dialog = this.createModal(this.componentEdit, _.get(this.options, 'dialogAttr', {}), () => this.showDialog());
 
     // This is the attach step.
     this.editForm.attach(this.componentEdit.querySelector('[ref="editForm"]'));
@@ -1365,6 +1409,7 @@ export default class WebformBuilder extends Component {
     });
 
     const dialogClose = () => {
+      console.log('dailog close--');
       this.editForm.destroy(true);
       if (this.preview) {
         this.preview.destroy(true);
