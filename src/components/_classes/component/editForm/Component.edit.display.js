@@ -141,14 +141,14 @@ export default [
   //   key: 'hidden',
   //   input: true
   // },
-  // {
-  //   weight: 1200,
-  //   type: 'checkbox',
-  //   label: 'Hide Label',
-  //   tooltip: 'Hide the label (title, if no label) of this component. This allows you to show the label in the form builder, but not when it is rendered.',
-  //   key: 'hideLabel',
-  //   input: true
-  // },
+  {
+    weight: 1200,
+    type: 'checkbox',
+    label: 'Hide Label',
+    tooltip: 'Hide the label (title, if no label) of this component. This allows you to show the label in the form builder, but not when it is rendered.',
+    key: 'hideLabel',
+    input: true
+  },
   // {
   //   weight: 1350,
   //   type: 'checkbox',
