@@ -168,14 +168,14 @@ export default [
       return context.instance.options.editComponent.inDataGrid;
     }
   },
-  // {
-  //   weight: 1400,
-  //   type: 'checkbox',
-  //   label: 'Disabled',
-  //   tooltip: 'Disable the form input.',
-  //   key: 'disabled',
-  //   input: true
-  // },
+  {
+    weight: 1400,
+    type: 'checkbox',
+    label: 'Disabled',
+    tooltip: 'Disable the form input.',
+    key: 'disabled',
+    input: true
+  },
   {
     weight: 1500,
     type: 'checkbox',
