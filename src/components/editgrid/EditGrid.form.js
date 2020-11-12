@@ -7,12 +7,12 @@ import EditGridEditValidation from './editForm/EditGrid.edit.validation';
 
 export default function(...extend) {
   return baseEditForm([
-    {
-      label: 'Templates',
-      key: 'templates',
-      weight: 5,
-      components: EditGridEditTemplates
-    },
+    // {
+    //   label: 'Templates',
+    //   key: 'templates',
+    //   weight: 5,
+    //   components: EditGridEditTemplates
+    // },
     {
       key: 'display',
       components: EditGridEditDisplay,

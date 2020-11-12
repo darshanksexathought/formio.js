@@ -30,21 +30,21 @@ export default [
       },
     },
   },
-  {
-    type: 'select',
-    input: true,
-    key: 'inputType',
-    label: 'Input Type',
-    tooltip: 'This is the input type used for this checkbox.',
-    dataSrc: 'values',
-    weight: 410,
-    data: {
-      values: [
-        { label: 'Checkbox', value: 'checkbox' },
-        { label: 'Radio', value: 'radio' },
-      ],
-    },
-  },
+  // {
+  //   type: 'select',
+  //   input: true,
+  //   key: 'inputType',
+  //   label: 'Input Type',
+  //   tooltip: 'This is the input type used for this checkbox.',
+  //   dataSrc: 'values',
+  //   weight: 410,
+  //   data: {
+  //     values: [
+  //       { label: 'Checkbox', value: 'checkbox' },
+  //       { label: 'Radio', value: 'radio' },
+  //     ],
+  //   },
+  // },
   {
     type: 'textfield',
     input: true,
