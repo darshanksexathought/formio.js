@@ -523,14 +523,37 @@ export default class WebformBuilder extends Component {
     return this.recurseNamespace(component.parent);
   }
 
+  geFilteredBasic(basicGroups) {
+    // this is to give the custom order remember to improve the performance we know the components those are fixed and wont change dynamically.
+    basicGroups.componentOrder = [
+      basicGroups.componentOrder[6],
+      basicGroups.componentOrder[8],
+      basicGroups.componentOrder[3],
+      basicGroups.componentOrder[4],
+      basicGroups.componentOrder[7],
+      basicGroups.componentOrder[1],
+      basicGroups.componentOrder[0],
+      basicGroups.componentOrder[2],
+      basicGroups.componentOrder[5],
+      basicGroups.componentOrder[11],
+      basicGroups.componentOrder[9],
+      basicGroups.componentOrder[10],
+      basicGroups.componentOrder[12],
+    ];
+  }
+
   render() {
     /**
      * @author darshan
      * rearranging groups based on tabs
      */
     this.basicGroups = [this.groupOrder[4]];
+    this.geFilteredBasic(this.groups[this.basicGroups[0]]);
     this.customGroups = [this.groupOrder[0], this.groupOrder[1], this.groupOrder[2], this.groupOrder[3]];
     this.otherGroups = [this.groupOrder[5], this.groupOrder[6]];
+    this.groups[this.customGroups[0]].default = true;
+    this.groups[this.otherGroups[0]].default = true;
+
     return this.renderTemplate('builder', {
       sidebar: this.renderTemplate('builderSidebar', {
         scrollEnabled: this.sideBarScroll,
