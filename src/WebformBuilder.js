@@ -547,10 +547,10 @@ export default class WebformBuilder extends Component {
      * @author darshan
      * rearranging groups based on tabs
      */
-    this.basicGroups = [this.groupOrder[4]];
+    this.basicGroups = [this.groupOrder[4], this.groupOrder[3], this.groupOrder[5]];
     this.geFilteredBasic(this.groups[this.basicGroups[0]]);
-    this.customGroups = [this.groupOrder[0], this.groupOrder[1], this.groupOrder[2], this.groupOrder[3]];
-    this.otherGroups = [this.groupOrder[5], this.groupOrder[6]];
+    this.customGroups = [this.groupOrder[0], this.groupOrder[1], this.groupOrder[2]];
+    this.otherGroups = [this.groupOrder[6]];
     this.groups[this.customGroups[0]].default = true;
     this.groups[this.otherGroups[0]].default = true;
 
