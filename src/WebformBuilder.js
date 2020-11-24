@@ -1240,10 +1240,19 @@ export default class WebformBuilder extends Component {
 
   get defaultDialogTemplate() {
     return `
-    <h3 ref="dialogHeader">${this.t('Do you want to discard ?')}</h3>
-    <div style="display:flex; justify-content: flex-end;">
-      <button ref="dialogCancelButton" class="btn btn-secondary">${this.t('Cancel')}</button>
-      <button ref="dialogYesButton" class="btn btn-primary">${this.t('Yes, discard it')}</button>
+    <div style="display:flex; justify-content: flex-end; height: 100%; margin-top: 25vh; background-color: white; padding-bottom: 20px; margin-left: 12px;">
+      <div>
+        <div style="padding: 8px 12px 1px 16px; background-color: #FF9B08; letter-spacing: 1.2px; color: white;">
+          <h4> Warning! </h4>
+        </div>
+        <div style="padding: 20px;">
+          You have unsaved changes on this page. Do you want to discard your changes?
+        </div>
+        <div style="display:flex; justify-content: flex-end; padding-right: 16px;">
+          <button ref="dialogCancelButton" class="btn btn-secondary" style="margin-right: 10px; color: #FF9B08; border-color: #FF9B08; background-color: white;">${this.t('Cancel')}</button>
+          <button ref="dialogYesButton" class="btn btn-primary" style="background-color: #FF9B08; color: white; border-color: #FF9B08; padding-right: 16px;">${this.t('Discard')}</button>
+        </div>
+      </div>
     </div>
   `;
   }
