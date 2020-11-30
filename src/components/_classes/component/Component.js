@@ -1813,7 +1813,7 @@ export default class Component extends Element {
       // Add error classes
       elements.forEach((input) => this.addClass(this.performInputMapping(input), 'is-invalid'));
 
-      if (dirty && this.options.highlightErrors) {
+      if (this.options.highlightErrors) {
         this.addClass(this.element, this.options.componentErrorClass);
       }
       else {
@@ -2584,13 +2584,13 @@ export default class Component extends Element {
    * @return {boolean}
    */
   isValid(data, dirty) {
-    return !this.invalidMessage(data, dirty);
+    return !this.invalidMessage(data, true);
   }
 
   setComponentValidity(messages, dirty, silentCheck) {
     const hasErrors = !!messages.filter(message => message.level === 'error').length;
-    if (messages.length && (!silentCheck || this.error) && (dirty || !this.pristine)) {
-      this.setCustomValidity(messages, dirty);
+    if (messages.length && (!silentCheck || this.error) ) {
+      this.setCustomValidity(messages, true);
     }
     else if (!silentCheck) {
       this.setCustomValidity('');
@@ -2626,7 +2626,7 @@ export default class Component extends Element {
   checkValidity(data, dirty, row, silentCheck) {
     data = data || this.rootValue;
     row = row || this.data;
-    return this.checkComponentValidity(data, dirty, row, { silentCheck });
+    return this.checkComponentValidity(data, true, row, { silentCheck });
   }
 
   checkAsyncValidity(data, dirty, row, silentCheck) {
