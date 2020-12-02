@@ -1,14 +1,14 @@
 // import EditFormUtils from './utils';
 /* eslint-disable max-len */
 export default [
-  {
-    weight: 1,
-    type: 'checkbox',
-    label: 'Multiple Values',
-    tooltip: 'Allows multiple values to be entered for this field.',
-    key: 'multiple',
-    input: true
-  },
+  // {
+  //   weight: 1,
+  //   type: 'checkbox',
+  //   label: 'Multiple Values',
+  //   tooltip: 'Allows multiple values to be entered for this field.',
+  //   key: 'multiple',
+  //   input: true
+  // },
   {
     type: 'textfield',
     label: 'Default Value',
