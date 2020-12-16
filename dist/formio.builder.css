@@ -103,7 +103,8 @@ dialog.fixed {
   background-color: #fff; }
 
 .has-feedback .form-control {
-  padding-right: 10px; }
+  padding-right: 10px;
+  min-width: 90px; }
 
 .has-feedback .form-control[type=hidden] {
   padding-right: 0px; }
@@ -260,7 +261,8 @@ td > .form-group {
     transform: rotate(360deg); } }
 
 .choices__list--dropdown {
-  z-index: 100; }
+  z-index: 100;
+  width: max-content !important; }
 
 .choices__list--multiple .choices__item {
   border-radius: 0;
@@ -365,9 +367,9 @@ td > .form-group {
   bottom: 0;
   left: 0;
   /* fix for Scrollbars not clickable on overflow #552 */
-  background: rgba(0, 0, 0, 0.4);
   animation: formio-dialog-fadein 0.5s;
-  /* end fix for Scrollbars not clickable on overflow #552 */ }
+  /* end fix for Scrollbars not clickable on overflow #552 */
+  width: 425px; }
 
 .formio-dialog.formio-dialog-disabled-animation,
 .formio-dialog.formio-dialog-disabled-animation .formio-dialog-overlay,
@@ -467,7 +469,16 @@ body.formio-dialog-open {
 
 .formio-dialog.formio-dialog-theme-default {
   padding-bottom: 160px;
-  padding-top: 160px; }
+  padding-top: 160px;
+  left: 50px;
+  position: absolute;
+  width: 25%;
+  overflow: hidden;
+  max-width: 100%;
+  min-width: 25%;
+  height: calc(100% - 40px);
+  display: flex;
+  justify-content: flex-end; }
 
 .formio-dialog.formio-dialog-theme-default.formio-dialog-closing .formio-dialog-content {
   -webkit-animation: formio-dialog-flyout .5s;
@@ -476,7 +487,7 @@ body.formio-dialog-open {
 .formio-dialog.formio-dialog-theme-default .formio-dialog-content {
   -webkit-animation: formio-dialog-flyin .5s;
   animation: formio-dialog-flyin .5s;
-  background: #f0f0f0;
+  background: #e0f2f1;
   border-radius: 5px;
   font-family: 'Helvetica',sans-serif;
   font-size: 1.1em;
@@ -484,15 +495,16 @@ body.formio-dialog-open {
   margin: 0 auto;
   max-width: 100%;
   padding: 1em;
-  position: relative;
-  width: 80%; }
+  position: absolute;
+  top: 65px;
+  height: calc(100% - 90px); }
 
 .formio-dialog.formio-dialog-theme-default .formio-dialog-close {
   border: none;
   background: transparent;
   cursor: pointer;
   position: absolute;
-  right: 0;
+  right: 15px;
   top: 0;
   z-index: 100; }
 
@@ -645,7 +657,8 @@ body.formio-dialog-open {
 /* Fix for Hidden checkbox in component editform. */
 .formio-component-hidden:not(.formio-component-checkbox),
 .formio-component-datasource {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  visibility: hidden; }
 
 .checkbox-inline label,
 .radio-inline label {
@@ -1068,7 +1081,7 @@ div[read-only="true"] .formio-component-textarea div[ref="input"] {
   text-align: left; }
 
 .form-builder-group-header {
-  padding: 0; }
+  padding: 0 !important; }
 
 .component-btn-group .component-settings-button {
   float: right;
@@ -1177,7 +1190,8 @@ div[read-only="true"] .formio-component-textarea div[ref="input"] {
 
 .component-edit-container {
   height: auto;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 15px; }
 
 .component-edit-content {
   height: calc(100% - 4em); }

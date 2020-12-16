@@ -1,10 +1,21 @@
+{% if(!ctx.component.hideLabel) { %}
+  <div style="
+      width: 100%;
+      padding-bottom: calc(.375rem + 1px);
+      padding-left: 15px;
+      margin-bottom: 0;
+      font-size: inherit;
+      line-height: 1.5;" >
+    {{ ctx.component.label}}
+  </div>
+{% } %}
 {% ctx.component.columns.forEach(function(column, index) { %}
 <div class="
     col-{{column.size}}-{{column.width}}
     col-{{column.size}}-offset-{{column.offset}}
     col-{{column.size}}-push-{{column.push}}
     col-{{column.size}}-pull-{{column.pull}}
-  " ref="{{ctx.columnKey}}">
-  {{ctx.columnComponents[index]}}
+  " ref="{{ctx.columnKey}}">  
+  {{ctx.columnComponents[index]}}  
 </div>
 {% }) %}
