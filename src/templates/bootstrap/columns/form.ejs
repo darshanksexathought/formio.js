@@ -6,9 +6,10 @@
       margin-bottom: 0;
       font-size: inherit;
       line-height: 1.5;" >
-    {{ ctx.component.label}}
+    {{ctx.component.label}}
   </div>
 {% } %}
+
 {% ctx.component.columns.forEach(function(column, index) { %}
 <div class="
     col-{{column.size}}-{{column.width}}
