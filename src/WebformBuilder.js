@@ -1446,7 +1446,6 @@ export default class WebformBuilder extends Component {
     });
 
     const dialogClose = () => {
-      console.log('dailog close--');
       this.editForm.destroy(true);
       if (this.preview) {
         this.preview.destroy(true);
