@@ -4,7 +4,7 @@ export default [
     ignore: true
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     label: 'Options Label Position',
     key: 'optionsLabelPosition',

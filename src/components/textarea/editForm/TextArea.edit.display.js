@@ -32,7 +32,7 @@ export default [
     label: 'Allow Spellcheck'
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'editor',
     label: 'Editor',
@@ -84,7 +84,7 @@ export default [
     }
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'uploadStorage',
     label: 'Image Upload Storage',
@@ -188,7 +188,7 @@ export default [
     }
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'as',
     label: 'Save As',

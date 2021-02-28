@@ -17,7 +17,8 @@ export default class TextAreaComponent extends TextFieldComponent {
       inputFormat: 'html',
       validate: {
         minWords: '',
-        maxWords: ''
+        maxWords: '',
+        customMessage: ' ',
       }
     }, ...extend);
   }

@@ -22,7 +22,7 @@ export default [
   },
   {
     weight: 24,
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'storeas',
     label: 'Store As',

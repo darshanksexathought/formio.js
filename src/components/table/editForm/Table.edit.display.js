@@ -62,7 +62,7 @@ export default [
     tooltip: 'Check this if you would like to "clone" the first row of components to all additional empty rows of the table.'
   },
   {
-    type: 'select',
+    type: 'selectF',
     label: 'Cell Alignment',
     key: 'cellAlignment',
     input: true,

@@ -76,7 +76,7 @@ export default {
                         valueProperty: 'value',
                         template: '<span>{{ item.label }}</span>',
                         persistent: true,
-                        type: 'select',
+                        type: 'selectF',
                         description: 'If set to Match it will use the same Request Type as sent to the Form.io server.'
                       }
                     ],
@@ -295,7 +295,7 @@ export default {
         legend: 'Action Execution',
         components: [
           {
-            type: 'select',
+            type: 'selectF',
             input: true,
             key: 'handler',
             label: 'Handler',
@@ -309,7 +309,7 @@ export default {
             multiple: true
           },
           {
-            type: 'select',
+            type: 'selectF',
             input: true,
             label: 'Methods',
             key: 'method',
@@ -345,7 +345,7 @@ export default {
                   {
                     components: [
                       {
-                        type: 'select',
+                        type: 'selectF',
                         input: true,
                         label: 'Trigger this action only if field',
                         key: 'field',
@@ -359,7 +359,7 @@ export default {
                         multiple: false
                       },
                       {
-                        type: 'select',
+                        type: 'selectF',
                         input: true,
                         label: '',
                         key: 'eq',

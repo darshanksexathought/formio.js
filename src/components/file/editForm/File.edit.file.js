@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 export default [
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'storage',
     label: 'Storage',

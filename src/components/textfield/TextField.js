@@ -17,7 +17,8 @@ export default class TextFieldComponent extends Input {
       validate: {
         minLength: '',
         maxLength: '',
-        pattern: ''
+        pattern: '',
+        customMessage: ' ',
       }
     }, ...extend);
   }

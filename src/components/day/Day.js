@@ -15,7 +15,7 @@ export default class DayComponent extends Field {
           required: false
         },
         month: {
-          type: 'select',
+          type: 'selectF',
           placeholder: '',
           required: false
         },

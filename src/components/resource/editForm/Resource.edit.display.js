@@ -8,7 +8,7 @@ export default [
     content: 'The Resource component is deprecated. Use the Select component with data source of "Resource" instead.',
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     dataSrc: 'url',
     data: {

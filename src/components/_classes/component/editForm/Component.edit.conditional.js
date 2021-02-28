@@ -9,7 +9,7 @@ export default [
     theme: 'default',
     components: [
       {
-        type: 'select',
+        type: 'selectF',
         input: true,
         label: 'This component should Display:',
         key: 'conditional.show',
@@ -22,7 +22,7 @@ export default [
         }
       },
       {
-        type: 'select',
+        type: 'selectF',
         input: true,
         label: 'When the form component:',
         key: 'conditional.when',

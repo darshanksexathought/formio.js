@@ -52,7 +52,7 @@ export default [
     }
   },
   {
-    type: 'select',
+    type: 'selectF',
     label: 'Add Another Position',
     key: 'addAnotherPosition',
     dataSrc: 'values',

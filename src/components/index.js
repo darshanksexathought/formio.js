@@ -79,7 +79,7 @@ export default {
   radio: RadioComponent,
   recaptcha: ReCaptchaComponent,
   resource: ResourceComponent,
-  select: SelectComponent,
+  selectF: SelectComponent,
   selectboxes: SelectBoxesComponent,
   // signature: SignatureComponent,
   // survey: SurveyComponent,

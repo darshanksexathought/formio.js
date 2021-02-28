@@ -1,7 +1,7 @@
 export default [
   {
     wieght: 200,
-    type: 'select',
+    type: 'selectF',
     datasrc: 'values',
     key: 'fields.day.type',
     label: 'Type',

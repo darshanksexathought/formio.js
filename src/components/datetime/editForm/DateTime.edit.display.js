@@ -1,6 +1,6 @@
 export default [
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'displayInTimezone',
     label: 'Display in Timezone',
@@ -18,7 +18,7 @@ export default [
     }
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'timezone',
     label: 'Select Timezone',

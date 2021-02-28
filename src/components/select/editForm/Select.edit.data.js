@@ -156,7 +156,7 @@ export default [
     },
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     dataSrc: 'url',
     data: {
@@ -188,7 +188,7 @@ export default [
     },
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     label: 'Value Property',
     key: 'valueProperty',

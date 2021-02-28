@@ -664,6 +664,7 @@ export default class WebformBuilder extends Component {
   }
 
   searchFields(searchString, groupName,tab=1) {
+    searchString = searchString?.toLowerCase();
     if (!this.refs['sidebar-groups']) {
       return;
     }

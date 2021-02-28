@@ -1,6 +1,6 @@
 export default [
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     weight: 50,
     key: 'currency',

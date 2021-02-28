@@ -12,7 +12,7 @@ export default [
     input: true
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'inputsLabelPosition',
     label: 'Inputs Label Position',

@@ -34,7 +34,7 @@ export default [
         }
       },
       {
-        type: 'select',
+        type: 'selectF',
         input: true,
         weight: 180,
         label: 'Shortcut',

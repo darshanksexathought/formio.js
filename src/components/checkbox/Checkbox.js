@@ -10,7 +10,10 @@ export default class CheckBoxComponent extends Field {
       dataGridLabel: true,
       labelPosition: 'right',
       value: '',
-      name: ''
+      name: '',
+      validate: {
+        customMessage: ' '
+      }
     }, ...extend);
   }
 

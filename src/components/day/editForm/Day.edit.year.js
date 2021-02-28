@@ -1,7 +1,7 @@
 export default [
   {
     wieght: 200,
-    type: 'select',
+    type: 'selectF',
     datasrc: 'values',
     key: 'fields.year.type',
     label: 'Type of input',

@@ -14,7 +14,8 @@ export default class NumberComponent extends Input {
         min: '',
         max: '',
         step: 'any',
-        integer: ''
+        integer: '',
+        customMessage: ' ',
       }
     }, ...extend);
   }

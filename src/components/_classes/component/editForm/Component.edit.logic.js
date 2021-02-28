@@ -67,7 +67,7 @@ export default [
                 },
                 dataSrc: 'values',
                 template: '<span>{{ item.label }}</span>',
-                type: 'select',
+                type: 'selectF',
               },
               {
                 weight: 10,
@@ -90,7 +90,7 @@ export default [
                     },
                   },
                   {
-                    type: 'select',
+                    type: 'selectF',
                     input: true,
                     label: 'When the form component:',
                     key: 'when',
@@ -217,11 +217,11 @@ export default [
                 },
                 dataSrc: 'values',
                 template: '<span>{{ item.label }}</span>',
-                type: 'select',
+                type: 'selectF',
               },
               {
                 weight: 20,
-                type: 'select',
+                type: 'selectF',
                 template: '<span>{{ item.label }}</span>',
                 dataSrc: 'json',
                 tableView: false,
@@ -321,7 +321,7 @@ export default [
                 },
                 dataSrc: 'values',
                 template: '<span>{{ item.label }}</span>',
-                type: 'select',
+                type: 'selectF',
                 customConditional({ row }) {
                   return row.type === 'property' &&
                     row.hasOwnProperty('property') &&

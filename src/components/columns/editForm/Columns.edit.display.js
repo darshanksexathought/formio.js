@@ -51,7 +51,7 @@ export default [
         defaultValue: ''
       },
       {
-        type: 'select',
+        type: 'selectF',
         key: 'size',
         defaultValue: 'md',
         label: 'Size',

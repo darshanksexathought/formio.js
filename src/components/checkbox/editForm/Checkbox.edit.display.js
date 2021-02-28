@@ -11,7 +11,7 @@ export default [
     ignore: true,
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     weight: 350,
     label: 'Shortcut',

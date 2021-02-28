@@ -1,5 +1,5 @@
 export const multiSelect = {
-  type: 'select',
+  type: 'selectF',
       label: 'Companies',
       key: 'companies',
       placeholder: 'Select a company',

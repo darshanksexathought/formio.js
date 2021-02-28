@@ -13,7 +13,7 @@ export default [
     }
   },
   {
-    type: 'select',
+    type: 'selectF',
     input: true,
     key: 'labelPosition',
     label: 'Label Position',
