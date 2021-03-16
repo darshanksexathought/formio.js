@@ -47,7 +47,7 @@ export default class SelectComponent extends Field {
   static get builderInfo() {
     return {
       title: 'Select',
-      group: 'basic',
+      group: 'noGroup',
       icon: 'th-list',
       weight: 70,
       documentation: 'http://help.form.io/userguide/#select',
