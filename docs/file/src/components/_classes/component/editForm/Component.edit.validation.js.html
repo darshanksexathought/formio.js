@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../../../../../">
-  <title data-ice="title">src/components/_classes/component/editForm/Component.edit.validation.js | formiojs</title>
+  <title data-ice="title">src/components/_classes/component/editForm/Component.edit.validation.js | @smartfoodsafe/formiojs</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="JavaScript powered Forms with JSON Form Builder"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="formiojs"><meta property="twitter:description" content="JavaScript powered Forms with JSON Form Builder"></head>
+<meta name="description" content="JavaScript powered Forms with JSON Form Builder"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@smartfoodsafe/formiojs"><meta property="twitter:description" content="JavaScript powered Forms with JSON Form Builder"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -232,8 +232,8 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/components/_classes/component/editForm/Component.edit.validation.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import EditFormUtils from &apos;./utils&apos;;
-import Evaluator from &apos;../../../../utils/Evaluator&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// import EditFormUtils from &apos;./utils&apos;;
+// import Evaluator from &apos;../../../../utils/Evaluator&apos;;
 
 /* eslint-disable quotes, max-len */
 export default [
@@ -245,130 +245,130 @@ export default [
     key: &apos;validate.required&apos;,
     input: true
   },
-  {
-    weight: 100,
-    type: &apos;checkbox&apos;,
-    label: &apos;Unique&apos;,
-    tooltip: &apos;Makes sure the data submitted for this field is unique, and has not been submitted before.&apos;,
-    key: &apos;unique&apos;,
-    input: true
-  },
-  {
-    weight: 0,
-    type: &apos;select&apos;,
-    key: &apos;validateOn&apos;,
-    defaultValue: &apos;change&apos;,
-    input: true,
-    label: &apos;Validate On&apos;,
-    tooltip: &apos;Determines when this component should trigger front-end validation.&apos;,
-    dataSrc: &apos;values&apos;,
-    data: {
-      values: [
-        { label: &apos;Change&apos;, value: &apos;change&apos; },
-        { label: &apos;Blur&apos;, value: &apos;blur&apos; }
-      ]
-    }
-  },
-  {
-    weight: 190,
-    type: &apos;textfield&apos;,
-    input: true,
-    key: &apos;errorLabel&apos;,
-    label: &apos;Error Label&apos;,
-    placeholder: &apos;Error Label&apos;,
-    tooltip: &apos;The label for this field when an error occurs.&apos;
-  },
-  {
-    weight: 200,
-    key: &apos;validate.customMessage&apos;,
-    label: &apos;Custom Error Message&apos;,
-    placeholder: &apos;Custom Error Message&apos;,
-    type: &apos;textfield&apos;,
-    tooltip: &apos;Error message displayed if any error occurred.&apos;,
-    input: true
-  },
-  {
-    type: &apos;panel&apos;,
-    title: &apos;Custom Validation&apos;,
-    collapsible: true,
-    collapsed: true,
-    style: { &apos;margin-bottom&apos;: &apos;10px&apos; },
-    key: &apos;custom-validation-js&apos;,
-    weight: 300,
-    customConditional() {
-      return !Evaluator.noeval;
-    },
-    components: [
-      EditFormUtils.logicVariablesTable(&apos;&lt;tr&gt;&lt;th&gt;input&lt;/th&gt;&lt;td&gt;The value that was input into this component&lt;/td&gt;&lt;/tr&gt;&apos;),
-      {
-        type: &apos;textarea&apos;,
-        key: &apos;validate.custom&apos;,
-        rows: 5,
-        editor: &apos;ace&apos;,
-        hideLabel: true,
-        input: true
-      },
-      {
-        type: &apos;htmlelement&apos;,
-        tag: &apos;div&apos;,
-        content: `
-          &lt;small&gt;
-            &lt;p&gt;Enter custom validation code.&lt;/p&gt;
-            &lt;p&gt;You must assign the &lt;strong&gt;valid&lt;/strong&gt; variable as either &lt;strong&gt;true&lt;/strong&gt; or an error message if validation fails.&lt;/p&gt;
-            &lt;h5&gt;Example:&lt;/h5&gt;
-            &lt;pre&gt;valid = (input === &apos;Joe&apos;) ? true : &apos;Your name must be &quot;Joe&quot;&apos;;&lt;/pre&gt;
-          &lt;/small&gt;`
-      },
-      {
-        type: &apos;well&apos;,
-        components: [
-          {
-            weight: 100,
-            type: &apos;checkbox&apos;,
-            label: &apos;Secret Validation&apos;,
-            tooltip: &apos;Check this if you wish to perform the validation ONLY on the server side. This keeps your validation logic private and secret.&apos;,
-            description: &apos;Check this if you wish to perform the validation ONLY on the server side. This keeps your validation logic private and secret.&apos;,
-            key: &apos;validate.customPrivate&apos;,
-            input: true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    type: &apos;panel&apos;,
-    title: &apos;JSONLogic Validation&apos;,
-    collapsible: true,
-    collapsed: true,
-    key: &apos;json-validation-json&apos;,
-    weight: 400,
-    components: [
-      {
-        type: &apos;htmlelement&apos;,
-        tag: &apos;div&apos;,
-        /* eslint-disable prefer-template */
-        content: &apos;&lt;p&gt;Execute custom logic using &lt;a href=&quot;http://jsonlogic.com/&quot; target=&quot;_blank&quot;&gt;JSONLogic&lt;/a&gt;.&lt;/p&gt;&apos; +
-          &apos;&lt;h5&gt;Example:&lt;/h5&gt;&apos; +
-          &apos;&lt;pre&gt;&apos; + JSON.stringify({
-            &quot;if&quot;: [
-              { &quot;===&quot;: [{ &quot;var&quot;: &quot;input&quot; }, &quot;Bob&quot;] },
-              true,
-              &quot;Your name must be &apos;Bob&apos;!&quot;
-            ]
-          }, null, 2) + &apos;&lt;/pre&gt;&apos;
-        /* eslint-enable prefer-template */
-      },
-      {
-        type: &apos;textarea&apos;,
-        key: &apos;validate.json&apos;,
-        hideLabel: true,
-        rows: 5,
-        editor: &apos;ace&apos;,
-        as: &apos;json&apos;,
-        input: true
-      }
-    ]
-  }
+  // {
+  //   weight: 100,
+  //   type: &apos;checkbox&apos;,
+  //   label: &apos;Unique&apos;,
+  //   tooltip: &apos;Makes sure the data submitted for this field is unique, and has not been submitted before.&apos;,
+  //   key: &apos;unique&apos;,
+  //   input: true
+  // },
+  // {
+  //   weight: 0,
+  //   type: &apos;select&apos;,
+  //   key: &apos;validateOn&apos;,
+  //   defaultValue: &apos;change&apos;,
+  //   input: true,
+  //   label: &apos;Validate On&apos;,
+  //   tooltip: &apos;Determines when this component should trigger front-end validation.&apos;,
+  //   dataSrc: &apos;values&apos;,
+  //   data: {
+  //     values: [
+  //       { label: &apos;Change&apos;, value: &apos;change&apos; },
+  //       { label: &apos;Blur&apos;, value: &apos;blur&apos; }
+  //     ]
+  //   }
+  // },
+  // {
+  //   weight: 190,
+  //   type: &apos;textfield&apos;,
+  //   input: true,
+  //   key: &apos;errorLabel&apos;,
+  //   label: &apos;Error Label&apos;,
+  //   placeholder: &apos;Error Label&apos;,
+  //   tooltip: &apos;The label for this field when an error occurs.&apos;
+  // },
+  // {
+  //   weight: 200,
+  //   key: &apos;validate.customMessage&apos;,
+  //   label: &apos;Custom Error Message&apos;,
+  //   placeholder: &apos;Custom Error Message&apos;,
+  //   type: &apos;textfield&apos;,
+  //   tooltip: &apos;Error message displayed if any error occurred.&apos;,
+  //   input: true
+  // },
+  // {
+  //   type: &apos;panel&apos;,
+  //   title: &apos;Custom Validation&apos;,
+  //   collapsible: true,
+  //   collapsed: true,
+  //   style: { &apos;margin-bottom&apos;: &apos;10px&apos; },
+  //   key: &apos;custom-validation-js&apos;,
+  //   weight: 300,
+  //   customConditional() {
+  //     return !Evaluator.noeval;
+  //   },
+  //   components: [
+  //     EditFormUtils.logicVariablesTable(&apos;&lt;tr&gt;&lt;th&gt;input&lt;/th&gt;&lt;td&gt;The value that was input into this component&lt;/td&gt;&lt;/tr&gt;&apos;),
+  //     {
+  //       type: &apos;textarea&apos;,
+  //       key: &apos;validate.custom&apos;,
+  //       rows: 5,
+  //       editor: &apos;ace&apos;,
+  //       hideLabel: true,
+  //       input: true
+  //     },
+  //     {
+  //       type: &apos;htmlelement&apos;,
+  //       tag: &apos;div&apos;,
+  //       content: `
+  //         &lt;small&gt;
+  //           &lt;p&gt;Enter custom validation code.&lt;/p&gt;
+  //           &lt;p&gt;You must assign the &lt;strong&gt;valid&lt;/strong&gt; variable as either &lt;strong&gt;true&lt;/strong&gt; or an error message if validation fails.&lt;/p&gt;
+  //           &lt;h5&gt;Example:&lt;/h5&gt;
+  //           &lt;pre&gt;valid = (input === &apos;Joe&apos;) ? true : &apos;Your name must be &quot;Joe&quot;&apos;;&lt;/pre&gt;
+  //         &lt;/small&gt;`
+  //     },
+  //     {
+  //       type: &apos;well&apos;,
+  //       components: [
+  //         {
+  //           weight: 100,
+  //           type: &apos;checkbox&apos;,
+  //           label: &apos;Secret Validation&apos;,
+  //           tooltip: &apos;Check this if you wish to perform the validation ONLY on the server side. This keeps your validation logic private and secret.&apos;,
+  //           description: &apos;Check this if you wish to perform the validation ONLY on the server side. This keeps your validation logic private and secret.&apos;,
+  //           key: &apos;validate.customPrivate&apos;,
+  //           input: true
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // },
+  // {
+  //   type: &apos;panel&apos;,
+  //   title: &apos;JSONLogic Validation&apos;,
+  //   collapsible: true,
+  //   collapsed: true,
+  //   key: &apos;json-validation-json&apos;,
+  //   weight: 400,
+  //   components: [
+  //     {
+  //       type: &apos;htmlelement&apos;,
+  //       tag: &apos;div&apos;,
+  //       /* eslint-disable prefer-template */
+  //       content: &apos;&lt;p&gt;Execute custom logic using &lt;a href=&quot;http://jsonlogic.com/&quot; target=&quot;_blank&quot;&gt;JSONLogic&lt;/a&gt;.&lt;/p&gt;&apos; +
+  //         &apos;&lt;h5&gt;Example:&lt;/h5&gt;&apos; +
+  //         &apos;&lt;pre&gt;&apos; + JSON.stringify({
+  //           &quot;if&quot;: [
+  //             { &quot;===&quot;: [{ &quot;var&quot;: &quot;input&quot; }, &quot;Bob&quot;] },
+  //             true,
+  //             &quot;Your name must be &apos;Bob&apos;!&quot;
+  //           ]
+  //         }, null, 2) + &apos;&lt;/pre&gt;&apos;
+  //       /* eslint-enable prefer-template */
+  //     },
+  //     {
+  //       type: &apos;textarea&apos;,
+  //       key: &apos;validate.json&apos;,
+  //       hideLabel: true,
+  //       rows: 5,
+  //       editor: &apos;ace&apos;,
+  //       as: &apos;json&apos;,
+  //       input: true
+  //     }
+  //   ]
+  // }
 ];
 /* eslint-enable quotes, max-len */
 </code></pre>
