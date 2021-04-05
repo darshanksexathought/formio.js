@@ -114,7 +114,7 @@ export default class NumberComponent extends Input {
     numberPattern += this.decimalSeparator || '';
     numberPattern += this.delimiter || '';
     numberPattern += ']*';
-    input.setAttribute('pattern', numberPattern);
+    input.setAttribute('pattern', '\\d*');
     input.mask = maskInput({
       inputElement: input,
       mask: this.numberMask
@@ -129,6 +129,7 @@ export default class NumberComponent extends Input {
     else {
       info.attr.type = 'text';
     }
+    info.attr.pattern='\\d*',
     info.attr.inputmode = this.isDecimalAllowed() ? 'decimal' : 'numeric';
     info.changeEvent = 'input';
     return info;
