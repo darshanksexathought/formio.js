@@ -182,7 +182,12 @@ export default class Input extends Multivalue {
 
   getValueAt(index) {
     const input = this.performInputMapping(this.refs.input[index]);
+
     if (input && input.widget) {
+      if (input.nodeName === 'INPUT') {
+        const value = (input.widget.getValue().length  + 1) * 8.1 + 20;
+        input.style.minWidth = `${value}px`;
+      }
       return input.widget.getValue();
     }
     return input ? input.value : undefined;
