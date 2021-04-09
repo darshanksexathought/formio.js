@@ -141,7 +141,7 @@ export default class NumberComponent extends Input {
     }
     const inputTest = this.refs.input[index];
     if (inputTest.nodeName === 'INPUT') {
-      const value = (inputTest.value.length  + 1) * 8.1 + 20;
+      const value = (inputTest.value.length  + 1) * 9.1 + 20;
       inputTest.style.minWidth = `${value}px`;
     }
     const val = this.refs.input[index].value;
