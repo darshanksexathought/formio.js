@@ -90,9 +90,6 @@ export default class DataGridComponent extends NestedArrayComponent {
 
   get defaultValue() {
     // Ensure we have one and only one row in builder mode.
-    if (this.builderMode) {
-      return [{}];
-    }
     const value = super.defaultValue;
     let defaultValue;
 
