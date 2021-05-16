@@ -623,35 +623,35 @@
     "filePath": "src/components/datagrid/DataGrid.js",
     "lines": [
       {
-        "lineNumber": 422,
+        "lineNumber": 419,
         "line": "  /**"
       },
       {
-        "lineNumber": 423,
+        "lineNumber": 420,
         "line": "   * Checks the validity of this datagrid."
       },
       {
-        "lineNumber": 424,
+        "lineNumber": 421,
         "line": "   *"
       },
       {
-        "lineNumber": 425,
+        "lineNumber": 422,
         "line": "   * @param data"
       },
       {
-        "lineNumber": 426,
+        "lineNumber": 423,
         "line": "   * @param dirty"
       },
       {
-        "lineNumber": 427,
+        "lineNumber": 424,
         "line": "   * @return {*}"
       },
       {
-        "lineNumber": 428,
+        "lineNumber": 425,
         "line": "   */"
       },
       {
-        "lineNumber": 429,
+        "lineNumber": 426,
         "line": "  checkValidity(data, dirty, row, silentCheck) {"
       }
     ],
