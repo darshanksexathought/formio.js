@@ -539,6 +539,7 @@ export default class WebformBuilder extends Component {
       basicGroups.componentOrder[9],
       basicGroups.componentOrder[10],
       basicGroups.componentOrder[12],
+      basicGroups.componentOrder[13],
     ];
   }
 
