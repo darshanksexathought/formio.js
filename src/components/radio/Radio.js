@@ -21,7 +21,7 @@ export default class RadioComponent extends Field {
       title: 'Radio',
       group: 'basic',
       icon: 'dot-circle-o',
-      weight: 70,
+      weight: 80,
       documentation: 'http://help.form.io/userguide/#radio',
       schema: RadioComponent.schema()
     };
