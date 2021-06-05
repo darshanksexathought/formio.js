@@ -127,7 +127,7 @@ export default class Input extends Multivalue {
     if (this.isMultipleMasksField) {
       info.attr.class += ' formio-multiple-mask-input';
     }
-     if (value && typeof value === 'string') {
+     if (value && (typeof value === 'string' || typeof value === 'number')) {
       const valueStr= `${value}`;
       const minWidth = (valueStr?.length  + 1) * 9.1 + 20;
       info.attr.style=`min-width:${minWidth}px;`;
