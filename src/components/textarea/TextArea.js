@@ -14,6 +14,7 @@ export default class TextAreaComponent extends TextFieldComponent {
       wysiwyg: false,
       editor: '',
       fixedSize: true,
+      autoExpand: true,
       inputFormat: 'html',
       validate: {
         minWords: '',
@@ -451,6 +452,11 @@ export default class TextAreaComponent extends TextFieldComponent {
     };
 
     const update = _.debounce(() => {
+      const lengthWidth = (textarea.value?.length  + 1) * 9.1 + 20;
+      if (Number(lengthWidth) < (window.screen.width/2)) {
+        textarea.style.minWidth = `${lengthWidth}px`;
+      }
+
       resize();
       const styleHeight = Math.round(parseFloat(textarea.style.height));
       const computed = window.getComputedStyle(textarea, null);
@@ -477,7 +483,10 @@ export default class TextAreaComponent extends TextFieldComponent {
     if (window) {
       this.addEventListener(window, 'resize', update);
     }
-
+    const lengthWidth = (textarea.value?.length  + 1) * 9.1 + 20;
+    if (Number(lengthWidth) < (window.screen.width/2)) {
+      textarea.style.minWidth = `${lengthWidth}px`;
+    }
     this.addEventListener(textarea, 'input', update);
     this.on('initialized', update);
     this.updateSizes[index] = update;
