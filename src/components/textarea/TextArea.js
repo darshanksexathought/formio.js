@@ -456,6 +456,9 @@ export default class TextAreaComponent extends TextFieldComponent {
       if (Number(lengthWidth) < (window.screen.width/2)) {
         textarea.style.minWidth = `${lengthWidth}px`;
       }
+else {
+        textarea.style.minWidth = `${window.screen.width/2}px`;
+      }
 
       resize();
       const styleHeight = Math.round(parseFloat(textarea.style.height));
