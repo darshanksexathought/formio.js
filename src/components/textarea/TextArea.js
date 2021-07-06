@@ -10,7 +10,7 @@ export default class TextAreaComponent extends TextFieldComponent {
       type: 'textarea',
       label: 'Text Area',
       key: 'textArea',
-      rows: 3,
+      rows: 1,
       wysiwyg: false,
       editor: '',
       fixedSize: true,
@@ -110,6 +110,13 @@ export default class TextAreaComponent extends TextFieldComponent {
   }
 
   attachElement(element, index) {
+    if (this.component.width) {
+      const pxVal = ((this.component.width/100)*window.screen.width)-60;
+      this.component.attributes = {
+        ...this.component.attributes,
+        style: `min-width:${pxVal}px`
+      };
+    }
     if (this.autoExpand && (this.isPlain || this.options.readOnly || this.options.htmlView)) {
       if (element.nodeName === 'TEXTAREA') {
         this.addAutoExpanding(element, index);
@@ -452,14 +459,6 @@ export default class TextAreaComponent extends TextFieldComponent {
     };
 
     const update = _.debounce(() => {
-      const lengthWidth = (textarea.value?.length  + 1) * 9.1 + 20;
-      if (Number(lengthWidth) < (window.screen.width/2)) {
-        textarea.style.minWidth = `${lengthWidth}px`;
-      }
-else {
-        textarea.style.minWidth = `${window.screen.width/2}px`;
-      }
-
       resize();
       const styleHeight = Math.round(parseFloat(textarea.style.height));
       const computed = window.getComputedStyle(textarea, null);
@@ -485,10 +484,6 @@ else {
 
     if (window) {
       this.addEventListener(window, 'resize', update);
-    }
-    const lengthWidth = (textarea.value?.length  + 1) * 9.1 + 20;
-    if (Number(lengthWidth) < (window.screen.width/2)) {
-      textarea.style.minWidth = `${lengthWidth}px`;
     }
     this.addEventListener(textarea, 'input', update);
     this.on('initialized', update);

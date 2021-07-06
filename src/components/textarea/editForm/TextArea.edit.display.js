@@ -24,6 +24,13 @@ export default [
     placeholder: 'Enter the amount of rows'
   },
   {
+    type: 'WIDTH',
+    input: true,
+    label: 'width',
+    key: 'width',
+    weight: 211,
+  },
+  {
     weight: 1350,
     type: 'checkbox',
     input: true,
